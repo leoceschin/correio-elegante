@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management-alpine
+    ports: 
+      - "5672:5672"
+      - "15672:15672"
+      
+  producer:
+    container_name: producer
+    build: ./producer
+    command: npm start
+    ports:
+      - "4001:3000"
+    volumes:
+      - ./producer:/usr/app
+
+  receiver:
+    container_name: receiver
+    build: ./receiver
+    command: npm start
+    ports:
+      - "4002:3000"
+    volumes:
+      - ./receiver:/usr/app
