@@ -8,4 +8,12 @@ services:
     ports:
       - "4002:3000"
     volumes:
-      - ./server:/home/pn/app
+      - ./server:/usr/app
+  
+  sender:
+    container_name: sender
+    build: ./envio
+    ports:
+      - "4001:80"
+    volumes:
+      - ./envio:/usr/share/nginx/html 
