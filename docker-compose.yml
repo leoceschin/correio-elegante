@@ -1,31 +1,11 @@
 version: '3.9'
 
 services:
-  rabbitmq:
-    container_name: rabbitmq
-    image: rabbitmq:3-management-alpine
-    ports: 
-      - "5672:5672"
-      - "15672:15672"
-      
-  producer:
-    container_name: producer
-    build: ./producer
-    command: npm start
-    ports:
-      - "4001:3000"
-    depends_on:
-      - rabbitmq
-    volumes:
-      - ./producer:/usr/app
-
-  receiver:
-    container_name: receiver
-    build: ./receiver
+  server:
+    container_name: server
+    build: ./server
     command: npm start
     ports:
       - "4002:3000"
-    depends_on:
-      - rabbitmq
     volumes:
-      - ./receiver:/usr/app
+      - ./server:/home/pn/app
