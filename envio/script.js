@@ -49,6 +49,7 @@ function checkInputs() {
 
         if(okToSend){
             sendMessage(msg);
+            location.reload();
         }
         
     }

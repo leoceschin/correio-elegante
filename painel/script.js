@@ -9,20 +9,22 @@ const getData = async () => {
     return data;
 }
 
-const insertData = async() =>{
+const insertData = async () => {
     const data = await getData();
-    console.log(data.destiny);
     destiny.innerHTML = data.destiny;
     message.innerHTML = data.message;
 
-    if(destiny.innerText != ""){
+    if (destiny.innerText != "") {
         audio.play();
     }
 }
 
-insertData();  
-setInterval(()=>{
+insertData();
+
+setInterval(() => {
+    destiny.innerHTML = "";
+    message.innerHTML = "";
     location.reload();
-}, 60000);
-    
+}, 10000);
+
 

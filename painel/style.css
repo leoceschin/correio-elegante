@@ -45,7 +45,7 @@ body {
 }
 
 .name-panel {
-  font-size: 2.5em;
+  font-size: 3em;
   font-family: 'Caprasimo', cursive;
   text-align: center;
   line-height: 2.7em;
@@ -53,6 +53,7 @@ body {
 
 .message-box {
   margin: 16px;
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,8 +62,8 @@ body {
 
 .message-panel {
   margin: 0 auto;
-  font-size: 2.5em;
-  max-height: 100%;
+  font-size: 3.5em;
+  max-height: 100vh;
   text-align: center;
   font-family: 'Caprasimo', cursive;
   position: relative;
