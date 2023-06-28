@@ -9,6 +9,7 @@ services:
       - "4002:3000"
     volumes:
       - ./server:/usr/app
+    network_mode: bridge  
   
   sender:
     container_name: sender
@@ -17,3 +18,14 @@ services:
       - "4001:80"
     volumes:
       - ./envio:/usr/share/nginx/html 
+    network_mode: bridge  
+
+
+  receiver:
+    container_name: panel
+    build: ./painel
+    ports:
+      - "4003:80"
+    volumes:
+      - ./painel:/usr/share/nginx/html
+    network_mode: bridge  

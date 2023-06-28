@@ -64,9 +64,8 @@ async function sendMessage(msg){
         body: JSON.stringify(msg)
     }
 
-    const response = await fetch("http://localhost:4002/", init)
+    const response = await fetch("http://192.168.15.3:4002", init)
     const dados = await response.json()
-    if(!alert(dados.message)) location.reload();
     
 }
 
