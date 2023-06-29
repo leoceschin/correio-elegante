@@ -3,10 +3,10 @@ Sistema de Correio Elegante feito para a Festa Junina da família.
 
 ## Funcionamento
 O serviço é acessado por uma página web no telefone. 
-![Alt text](./readme_imgs/im01_frontvazio.jpeg?raw=true "Página web campos vazios" =100x)
+![Alt text](./readme_imgs/im01_frontvazio.jpeg?raw=true "Página web campos vazios")
 
 Essa página possui um formulário com dois campos e faz a validação dos mesmo antes de enviar
-![Alt text](./readme_imgs/im01_validacao.jpeg?raw=true "Página web validação" =100x)
+![Alt text](./readme_imgs/im01_validacao.jpeg?raw=true "Página web validação")
 
 Os dados são enviados para um servidor em NodeJs que os armazena em uma fila.
 
