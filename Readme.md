@@ -16,5 +16,5 @@ Ao carregar as informações na tela é emitido um sinal sonoro para avisar o p�
 
 ## Tecnologia
 A aplicação toda roda em 3 containers do Docker(um container nodeJS para o backend e dois containers rodando nginx para o frontend).
-- Wetch API (para as requisições HTTP)
+- Fetch API (para as requisições HTTP)
 - Web Speech API (para reprodução em áudio do texto)
